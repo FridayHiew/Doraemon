@@ -1,0 +1,107 @@
+to do list
+1. remove pagination html > done (20 jan 23)
+2. re-structure display data & search done (20 jan 23)
+3. add add/edit user managment for approved logic
+
+
+User-managment
+1.add details page for edit > done (20 jan 23)
+2.add unlock feature at listing  done (22 jan 23)
+3. add remove feature at listing (22 Jan 23 > kiv, use delete feature in details page)
+4. remove pagination html > done (20 jan 23)
+
+profile
+1. show own profile
+2. login details
+>login full name
+>build version
+>last login
+>un-successful login
+
+
+--------------User Management button design--------------------
+
+
+
+<?php
+
+$Button_Switch= "";
+
+
+switch ($Button_Switch) {
+  case "Add_Edit":
+	 echo '<button name="submit" value="save">Save</button>';	 
+	 echo '<button name="submit" value="submit">Submit</button>';
+	 echo '<button name="submit" value="cancel">Cancel</button>'
+    break;
+  case "Return_Draft":
+	 echo '<button name="submit" value="save">Save</button>'	 
+	 echo '<button name="submit" value="submit">Submit</button>'
+	 echo '<button name="submit" value="delete">Delete</button>'
+	 echo '<button name="submit" value="cancel">Cancel</button>'
+    break;	
+  case "Approved_Rejected":
+    break;  
+  case "Pending_Approved":
+	 echo '<button name="submit" value="Approved" >Approve</button>'
+	 echo '<button name="submit" value="Returned" >Return</button>'	 
+	 echo '<button name="submit" value="Rejected" >Reject</button>'	 
+	 echo '<button name="submit" value="cancel" >Cancel</button>'
+    break;  
+}
+?>
+
+
+
+
+<a href="./display.php?data=Data1&data2=Data120">Click here</a>
+
+
+<?php
+    if(isset($_GET["data"]) && isset($_GET["data2"]))
+    {
+        $data = $_GET["data"];
+        $data2 = $_GET["data2"];
+    }
+
+?>
+
+
+
+
+
+Add > username free
+Edit > username lock
+{
+	 <button name="submit" value="save">Save</button>	 
+	 <button name="submit" value="submit">Submit</button>
+	 <button name="submit" value="cancel">Cancel</button>
+}
+
+
+
+
+
+Return/Draft > username lock
+{
+	 <button name="submit" value="save">Save</button>	 
+	 <button name="submit" value="submit">Submit</button>
+	 <button name="submit" value="delete">Delete</button>
+	 <button name="submit" value="cancel">Cancel</button>
+}
+
+
+Approved/Rejected
+{
+NULL
+}
+
+
+Pending Approval	 
+	 <button name="submit" value="Approved" >Approve</button>
+	 <button name="submit" value="Returned" >Return</button>	 
+	 <button name="submit" value="Rejected" >Reject</button>	 
+	 <button name="submit" value="cancel" >Cancel</button>
+ </div>
+ 
+ 

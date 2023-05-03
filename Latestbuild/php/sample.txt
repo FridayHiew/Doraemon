@@ -1,0 +1,21 @@
+-------------multiple button--------------
+
+ <div class="action2">
+	 <button name="submit" value="save">Save</button>
+	 <button name="submit" value="submit">Submit</button>
+	 <button name="submit" value="lock">Lock</button>
+	 <button name="submit" value="cancel">Cancel</button>
+	 <button name="submit" value="unlock">Unlock</button>
+	 <div>&nbsp;</div>
+ </div>
+
+>>>>>>>>>>>>>>>>>
+<?php
+$process = $_POST["submit"];
+
+if($process=="save")      { echo "Have a nice save!"; }
+else if($process=="submit") {  echo "Have a nice submit!"; }
+else if($process=="lock") {  echo "Have a nice lock!"; }
+else if($process=="Cancel") {  echo "Have a nice Cancel!"; }
+else if($process=="unlock") {  echo "Have a nice Unlock!"; }
+else {echo "Have a nice error!";}
